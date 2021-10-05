@@ -1,2 +1,1 @@
-hi
-this is my first repositories
+aws ec2 run-instances --instance-type t2.micro --key-name test1 --security-group-ids sg-0f13375da13db3d65 --image-id ami-087c17d1fe0178315 --count 1 --subnet-id subnet-3b98bb64 
