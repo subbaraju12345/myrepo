@@ -1,19 +1,21 @@
 version: 0.0
 os: linux
 files:
-  - source: index.html
+  - source: ./sharpsell-backend
     destination: /var/www/html/sharpsell-backend
-file_exists_behavior: OVERWRITE
+  - source: ./core-service-api
+    destination: /home/ec2-user/core-service-api
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root
+    - location: bin/auto-deploy
+    - location: deploy/auto-deploy
+      timeout: 3600
+      runas: root  
   ApplicationStop:
-    - location: scripts/stop_server.sh
-      timeout: 300
-      runas: root
+    # - location: scripts/stop_server
+      # timeout: 3600
+      # runas: root
   ApplicationStart:
-    - location: scripts/start_server.sh
-      timeout: 300
-      runas: root
+    # - location: scripts/start_server
+      # timeout: 3600
+      # runas: root
