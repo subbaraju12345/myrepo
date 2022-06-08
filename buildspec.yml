@@ -11,4 +11,4 @@ phases:
   post_build:
     commands:
       files:
-    - target/messageUtil-1.0.jar
+    
