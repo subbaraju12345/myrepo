@@ -11,4 +11,4 @@ phases:
   post_build:
     commands:
       files:
-    - target/testaiobuc.zip
+    - target/messageUtil-1.0.jar
