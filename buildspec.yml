@@ -10,4 +10,5 @@ phases:
      
   post_build:
     commands:
-      
+      files:
+    - target/testaiobuc
