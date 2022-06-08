@@ -1,17 +1,18 @@
 version: 0.2
+
 phases:
   install:
-   runtime-versions:
-       nodejs: 12
-    
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
   build:
     commands:
-    - ls
-     
+      - ls
   post_build:
     commands:
-    
-  artifacts:
-   files:
-    - target/messageUtil-1.0.jar 
-    
+      
+artifacts:
+  files:
+    - target/messageUtil-1.0.jar
